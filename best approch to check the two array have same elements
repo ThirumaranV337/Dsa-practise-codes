@@ -1,0 +1,23 @@
+class Solution:
+    def checkEqual(self, a, b) -> bool:
+       hash_map={}//to increase the time efficiency
+       for num in a:
+           hash_map[num]=hash_map.get(num,0)+1#here I had made a big mistake that is when we simply give the hash_map.get(num,0)+1 the python will not update the orignal value it create new ,so always assign a variable like this   
+       for num2 in b:
+           if num2 not in hash_map:
+               return False
+           
+           elif hash_map.get(num2)==0:
+               return False
+           
+           hash_map[num2]-=1
+               
+       return True     
+       
+               
+           
+o1=Solution()
+a=[1,2,4,4,0]
+b=[2,4,5,0,1]
+
+ans=o1.checkEqual(a,b)   
