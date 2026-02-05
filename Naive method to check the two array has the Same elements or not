@@ -1,0 +1,24 @@
+class Solution:
+    def checkEqual(self, a, b) -> bool:
+        b_sort=sorted(b)
+        a_sort=sorted(a)
+        
+        
+        
+        for checker in b_sort:
+            if checker  in a_sort :
+                a_sort.remove(checker)
+                b_sort.remove(checker)
+            else:
+                return "false"
+        length_a=len(a_sort)
+        length_b=len(b_sort)
+        if length_a and length_b==0:
+            
+           return "true"   
+o1=Solution()
+a=[1,2,5,4,0]
+b=[2,4,5,0,1]
+ans=o1.checkEqual(a,b)        
+        
+            
