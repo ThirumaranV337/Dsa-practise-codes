@@ -1,0 +1,20 @@
+class Solution:
+    def frequencyCount(self, arr):
+        length=len(arr)
+        hash_map={}
+        frequency_count=[]
+        for value_adder in arr:
+            hash_map[value_adder]=hash_map.get(value_adder,0)+1
+        for checker in range(1,length+1):
+            if checker in hash_map:
+                counter=hash_map[checker]
+                frequency_count.append(counter)
+            else:
+                frequency_count.append(0)
+        return frequency_count        
+                
+                
+    
+Solution1=Solution()
+arr=[2,3,2,3,5]
+ans=Solution1.frequencyCount(arr)
