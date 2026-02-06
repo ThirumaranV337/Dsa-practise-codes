@@ -1,0 +1,13 @@
+def rotateArray(arr: list, k: int) -> list:
+    
+    if k > 0:#here I checking the values I positive or not 
+        list_to_store_rotating_value=[]
+        for i in range(k):
+            element_to_add=arr.pop(0)
+            list_to_store_rotating_value.append(element_to_add)
+        rotate_list=arr+list_to_store_rotating_value       
+        return rotate_list
+arr=[1,2,3,4,5] 
+k=int(input("Enter the number of steps the number of steps the value want to rotate:"))
+ans=rotateArray(arr,k)
+print(ans)
