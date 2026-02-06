@@ -1,0 +1,19 @@
+class Solution:
+    def isSubset(self, a, b):
+        hash_map={}
+        for value_adder in a:
+            hash_map[value_adder]=hash_map.get(value_adder,0)+1#I was learned to assing the hash_map for current update
+        for value_checker in b:
+            if value_checker not in hash_map or hash_map[value_checker]<=0:
+                return False
+            hash_map[value_checker]-=1   
+        return True    
+Solution_1=Solution()
+a=[1,2,2]
+b= [1,1]
+ans=Solution_1.isSubset(a,b)
+    
+    
+    
+    
+
