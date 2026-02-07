@@ -1,0 +1,9 @@
+class Solution:
+    def removeDuplicates(self, arr):
+        with_out_duplicate=set()#set was used for hash map
+        return_arr=[]#this arr for returning the arr
+        for checker in arr:
+            if checker not in with_out_duplicate:#checking the element is duplicate or not 
+                with_out_duplicate.add(checker)
+                return_arr.append(checker)
+        return return_arr
