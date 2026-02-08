@@ -1,0 +1,22 @@
+class Solution:
+    def hasTripletSum(self, arr, target):
+        
+        length=len(arr)
+        hash_table=set()
+        for i in range(length):
+           for j in range(i+1,length):
+               sum=arr[i]+arr[j]
+               checker=target-sum
+                   
+               if checker in hash_table:
+                   return True
+               adder_element=arr[j]
+               hash_table.add(adder_element)//this line is to remove the repeated unwanted values  
+           hash_table.clear()  
+        return False       
+               
+                       
+object1=Solution()
+arr= [1, 4, 45, 6, 10, 8]
+target=13
+ans=object1.hasTripletSum(arr,target)
