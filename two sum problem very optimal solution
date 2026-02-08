@@ -1,0 +1,15 @@
+class Solution:
+	def twoSum(self, arr, target):
+		hash_map=set()
+		for num in arr:
+		    if target-num in hash_map:#num + partner = target→ partner = target − num ,so it will pass all tests
+
+		        return True
+		    hash_map.add(num)
+		return False    
+Object_1=Solution()
+arr=[1,-2,-3,1]
+target=-2
+ans=Object_1.twoSum(arr,target)
+# time complexity o(n)
+#space complexity o(n)
