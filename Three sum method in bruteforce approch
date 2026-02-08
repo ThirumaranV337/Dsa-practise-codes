@@ -1,0 +1,15 @@
+class Solution:
+    def hasTripletSum(self, arr, target):
+        length=len(arr)
+        for i in range(length):
+           for j in range(i+1,length):
+               for k in range(j+1,length):
+                   sum=arr[i]+arr[j]+arr[k]
+                   if sum==target:
+                       return True
+        return False               
+object1=Solution()
+arr=[1,4,45,6,10,8]
+target=13
+ans=object1.hasTripletSum(arr,target)
+#time complexity o(n^3)
