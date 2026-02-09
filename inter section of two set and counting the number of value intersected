@@ -1,0 +1,13 @@
+class Solution:
+    def intersectSize(self,a, b):
+        a_set=set(a)
+        b_set=set(b)
+        count=0
+        for checker in a_set:
+            if checker in b_set:
+              count+=1
+        return count    
+o1=Solution()
+a=[89, 24, 75, 11, 23]
+b= [89, 2, 4]
+ans=o1.intersectSize(a,b)
