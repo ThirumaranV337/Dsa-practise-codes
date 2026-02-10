@@ -1,0 +1,29 @@
+class Solution:
+    def fourSum(self, arr, target):
+        returning_list=[]
+        length=len(arr)
+        for i in range(length):
+            for j in range(i+1,length):
+                for k in range(j+1,length):
+                    for l in range(k+1,length):
+                        sum=arr[i]+arr[j]+arr[k]+arr[l]
+                        if sum==target:
+                            list_to_append=[arr[i],arr[j],arr[k],arr[l]]
+                            list_to_append.sort()
+                            if list_to_append not in returning_list:
+                                returning_list.append(list_to_append)
+                                
+                                
+       
+    
+        
+        
+               
+        return  returning_list
+object=Solution()
+arr=[0, 0, 2, 1, 1]
+target=3
+ans=object.fourSum(arr,target)
+#here the time complexity in o(n^4)
+#here the space complexity is o(n^4)
+        
