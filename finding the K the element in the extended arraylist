@@ -1,0 +1,13 @@
+class Solution:
+    def kthElement(self, a, b, k):
+        a.extend(b)
+        a.sort()
+        ans=a[k-1]
+        return ans
+object=Solution()
+a=[1,2,3,4,5]
+b=[3,4,2,1,8]
+k=5
+ans=object.kthElement(a,b,k)
+
+        
