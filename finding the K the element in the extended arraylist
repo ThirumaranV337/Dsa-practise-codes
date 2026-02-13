@@ -9,5 +9,4 @@ a=[1,2,3,4,5]
 b=[3,4,2,1,8]
 k=5
 ans=object.kthElement(a,b,k)
-
-        
+##Given two sorted arrays a[] and b[] and an element k, the task is to find the element that would be at the kth position of the combined sorted array.
