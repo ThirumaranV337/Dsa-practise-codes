@@ -1,0 +1,9 @@
+class Solution:
+    def removeDuplicates(self, arr):
+       set_value=set(arr)
+       list_value=list(set_value)
+       list_value.sort()
+       return list_value
+o1=Solution()
+arr=[1,2,2,3]
+ans=o1.Solution(arr)
