@@ -1,0 +1,22 @@
+class Solution:
+    def all_sub_array(self,arr):
+        length=len(arr)
+        for i in range(length):
+            return_arr=[]
+            for j in range(i,length):
+                if i==j:
+                    element=arr[i]
+                    return_arr.append(element)
+                    print(return_arr)
+                else:
+                    element=arr[j]
+                    return_arr.append(element)
+                    print(return_arr)
+
+                    
+
+    
+o1=Solution() 
+arr=[8,12,3]
+ans=o1.all_sub_array(arr)
+               
