@@ -1,0 +1,21 @@
+class Solution:
+    def longestSubarray(self, arr, k):  
+         length=len(arr)
+         length_finder=[]
+         for i in range(length):
+             for j in range(i,length):
+                 arr_return=[]
+                 for k in range(i,j+1):
+                     element=arr[k]
+                     arr_return.append(element)
+                 length_to_return=len(arr_return)
+                 length_finder.append(length_to_return)
+         max_return=max(length_finder)
+         return max_return
+    
+o1=Solution() 
+arr=[8,12,3]
+ans=o1.longestSubarray(arr)
+print(ans)               
+
+    
