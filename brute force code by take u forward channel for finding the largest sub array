@@ -1,0 +1,20 @@
+class Solution:
+    def longestSubarray(self, arr, k):
+        length=len(arr)
+        max_length=0
+        for i in range(length):
+            for j in range(i,length):
+                sum=0
+                for finder in range(i,j+1):#here I have used j+n because of the nature of the range
+                    sum+=arr[finder]
+                if sum==k:#I placed this here becoz I so only it check 
+                    max_length=max(max_length,j-i+1)#finding the maximum element in it
+        return max_length
+            
+            
+           
+o1=Solution() 
+arr=[-5,8,-14,2,4,12]
+k=-5
+ans=o1.longestSubarray(arr,k)
+              
