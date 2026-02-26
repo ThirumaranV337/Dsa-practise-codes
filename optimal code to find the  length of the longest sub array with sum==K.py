@@ -20,3 +20,5 @@ o1=Solution()
 arr=[10,5,2,7,1,-10]
 k=15
 ans=o1.longestSubarray(arr,k)
+#the time comlexity is o(n)
+#the space complexity is o(n)
