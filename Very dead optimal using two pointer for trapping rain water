@@ -1,0 +1,33 @@
+class Solution(object):
+    def trap(self, height):
+        length=len(height)
+        left_maximum=0
+        right_maximum=0
+        left_pointer=0
+        sum_value=0
+        right_pointer=length-1
+        while left_pointer<=right_pointer:
+            if height[left_pointer]<=height[right_pointer]:
+                if height[left_pointer]>=left_maximum:
+                    left_maximum=height[left_pointer]
+                    left_pointer+=1
+                elif height[left_pointer]<=left_maximum:
+                    value_adder=left_maximum-height[left_pointer]
+                    sum_value+=value_adder
+                    left_pointer+=1
+                
+            elif height[left_pointer]>=height[right_pointer]:
+                if height[right_pointer]>=right_maximum:
+                    right_maximum=height[right_pointer]
+                    right_pointer-=1
+                elif height[right_pointer]<=right_maximum:
+                    value_adder=right_maximum-height[right_pointer]
+                    sum_value+=value_adder
+                    right_pointer-=1
+                    
+        return sum_value   
+             
+o1=Solution()
+height = [0,1,0,2,1,0,1,3,2,1,2,1]
+ans=o1.trap(height)
+#greedy method algorithm
