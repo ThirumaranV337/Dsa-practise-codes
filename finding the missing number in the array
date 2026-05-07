@@ -1,0 +1,9 @@
+class Solution(object):
+    def missingNumber(self, nums):
+        hash_map=set(nums)
+        length=len(nums)
+        for i in range(length+1):
+            if i in hash_map:
+                pass
+            else:
+                return i
