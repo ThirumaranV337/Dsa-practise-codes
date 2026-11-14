@@ -1,0 +1,17 @@
+class Solution:
+    def countDistinct(self, arr, k):
+        # code here
+        unique_store=set()
+        unique=[]
+        for i in range(len(arr)-k+1):
+            for j in range(i,i+k):
+                unique_store.add(arr[j])
+            unique_count=len(unique_store)
+            unique.append(unique_count)
+            unique_store.clear()
+        return unique
+
+o1=Solution()
+ans=o1.countDistinct([1, 2, 1, 3, 4, 2, 3],4)
+
+##time o(n^2)
